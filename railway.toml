@@ -1,0 +1,5 @@
+# Reference config for the Warmbly core service (image ghcr.io/onepush-dev/warmbly-core).
+[deploy]
+healthcheckPath = "/health"
+healthcheckTimeout = 600
+restartPolicyType = "ALWAYS"
