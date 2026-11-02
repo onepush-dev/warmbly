@@ -1,6 +1,6 @@
 # Warmbly on Railway
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/warmbly)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/vZxFR-)
 
 One-click Railway template for [Warmbly](https://github.com/warmbly/warmbly) (Apache-2.0), the open-source cold email and mailbox warmup platform. It runs upstream's published release images (v0.6.72), wired together with Railway Postgres, Redis and NATS. No inputs are needed at deploy time.
 
