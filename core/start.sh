@@ -28,7 +28,7 @@ echo "[warmbly] starting backend on ${API_HOST}"
 su-exec warmbly /app/backend & B=$!
 trap 'kill -TERM $B ${W:-} ${C:-} 2>/dev/null; wait; exit 0' TERM INT
 i=0
-until wget -q -O /dev/null "http://127.0.0.1:${PORT}/health"; do
+until wget -q -O /dev/null "http://127.0.0.1:${PORT}/health" 2>/dev/null; do
   kill -0 $B 2>/dev/null || { echo "[warmbly] backend exited during startup" >&2; exit 1; }
   i=$((i+1)); [ $i -gt 600 ] && { echo "[warmbly] backend not healthy after 10 min" >&2; kill -TERM $B; exit 1; }
   sleep 1
